@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple L.Timelines on One L.timelineSliderControl</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="./leaflet.timeline.js"></script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+      /*
+      * Everything fullscreen.
+      */
+      html,
+      body,
+      #map {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+
+      /*
+      * You could style the timeline however you like, but we just make it wider here.
+      */
+      .leaflet-left {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+         var points = {
+     type: "FeatureCollection",
+     features: [
+       {
+         type: "Feature",
+         properties: {
+           start: "2009-09-15",
+           end: "2010-08-07",
+           url: "https://lex.page/read/0e66c104-7b9f-4a56-95ca-989bc8470795"
+         },
+         geometry: {
+           type: "Point",
+           coordinates: [33.251778104724416, 44.27766716031223],
+         },
+       },
+       {
+         type: "Feature",
+         properties: {
+           start: "2006-03-15",
+           end: "206-03-15",
+           url: "https://lex.page/read/0e66c104-7b9f-4a56-95ca-989bc8470795"
+         },
+         geometry: {
+           type: "Point",
+           coordinates: [34.937613863066176, 69.25211845755727],
+         },
+       },
+     ],
+    };
+
+      /*
+       * Create the map
+       */
+      var map = L.map("map").setView([0, 0], 2);
+
+      L.tileLayer(
+        'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', { 
+          maxZoom: 20, 
+          attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors' 
+        }).addTo(map);
+
+      var slider = L.timelineSliderControl({
+        formatOutput: function (date) {
+          return moment(date).format("YYYY-MM-DD");
+        },
+      });
+      map.addControl(slider);
+
+      var pointTimeline = L.timeline(points);
+      pointTimeline.addTo(map);
+      slider.addTimelines(pointTimeline);
+    </script>
+  </body>
+</html>
