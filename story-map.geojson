@@ -3,13 +3,13 @@
     "type": "Feature",
     "geometry": {
       "type": "Point",
-      "coordinates": [-118.2437, 34.0522]
+      "coordinates": [33.251778104724416, 44.27766716031223]
     },
     "properties": {
-      "title": "Story 1",
+      "title": "Caveman 6",
       "length": 10,
       "time": 1585443537000,
-      "url": "http://story1.com"
+      "url": "https://lex.page/read/0e66c104-7b9f-4a56-95ca-989bc8470795"
     }
   },
   {
