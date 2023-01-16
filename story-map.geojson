@@ -1,0 +1,20 @@
+"features":[{
+	"type":"Feature",
+	"properties":{
+		"place":"Camp Deutch, Victory Base Complex, Baghdad, Iraq", 
+		"time":2009-09-30T00:00:01+00:00,
+		"updated":2010-08-07T00:00:01+00:00,
+		"tz":null,
+		"url":"https://lex.page/read/0e66c104-7b9f-4a56-95ca-989bc8470795",	
+		"detail":"Caveman6",	
+		"code":"DBKW-0000001",
+		"ids":",lex-dbkw-0000001,",
+		"sources":",lex,",
+		"type":"lex-story",
+		"title":"Stories from the CP -- Caveman 6"},
+	"geometry":{
+		"type":"Point",
+		"coordinates": [33.251778104724416, 44.27766716031223]},
+		"id":"ci40402184"},
+}
+]
