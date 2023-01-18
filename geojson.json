@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+      "type": "Feature",
+      "properties": {
+        "start": "2009-09-15",
+        "end": "2010-08-07",
+        "author": "Kelly McCoy",
+        "rank": "CPT",
+        "service": "US Army",
+        "title": "Caveman 6 -- Stories from the CP",
+        "pitch": "Stories I tell...",
+        "url": "https://lex.page/read/0e66c104-7b9f-4a56-95ca-989bc8470795"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [33.251778104724416, 44.27766716031223]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "start": "2006-03-15",
+        "end": "2006-03-15",
+        "author": "Kelly McCoy",
+        "rank": "1LT",
+        "service": "US Army",
+        "unit": "C/502d MI BN",
+        "title": "From Bagram with Love",
+        "pitch": "How I met your mother",
+        "url": "https://lex.page/read/0e66c104-7b9f-4a56-95ca-989bc8470795"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [34.937613863066176, 69.25211845755727]
+      }
+    }
+  ]
+}
